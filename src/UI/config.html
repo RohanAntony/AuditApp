@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      .container{
+        margin-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+    <title>Audit App</title>
+  </head>
+  <body>
+
+    <div class="content-fetch container">
+      <form class="" action="coreSummary.html" method="post">
+
+        <div class="meta-details form-group">
+
+          <h3>Audit Report</h3>
+          <hr>
+
+          <!-- region -->
+          <div class="form-group form-inline" name="branch">
+            <div class="form-group mb-2">
+              <label for="Branch">Region</label>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <select class="form-control form-inline" name="Branch" id="region">
+                <!-- <option value="Bangalore">Bangalore</option> -->
+              </select>
+            </div>
+          </div>
+
+          <!-- branch -->
+          <div class="form-group form-inline" name="branch">
+            <div class="form-group mb-2">
+              <label for="Branch">Branch</label>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <select class="form-control form-inline" name="Branch" id="branch">
+                <!-- <option value="ICIC0001009">Banashankri, Bangalore</option> -->
+              </select>
+            </div>
+          </div>
+
+          <!-- date of inspection -->
+          <div class="form-group form-inline" name="branch">
+            <div class="form-group mb-2">
+              <label for="Branch">Date of Inspection: &nbsp; <span id="dateOfInspectionDisplay"></span> </label>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input hidden type="text" readonly id="dateOfInspection" value="">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Start Audit</button>
+
+          </div>
+
+          <hr>
+
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      // var allRegionBranchDetails = [
+      //   {
+      //     region:'Mangalore',
+      //     branch:[
+      //       {
+      //         ifsc:'ICIC0000014',
+      //         branch: 'GROUND FLOOR, BHARATH BUILDING, POST BOX NO. 44, PANJE MANGESH RAO ROAD'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000557',
+      //         branch:'ICICI BANK LTD., INFOSYS TECHNOLOGIES LTD., INFOSYS MANGALA, KULUR FERRY ROAD, KOTTARA'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000561',
+      //         branch:'ST. AGNES SPECIAL SCHOOL, BENDOOR'
+      //       }
+      //     ]
+      //   }
+      //   ,{
+      //     region:'Bangalore',
+      //     branch:[
+      //       {
+      //         ifsc:'ICIC0000002',
+      //         branch: 'ICICI BANK LTD TOWERS, 1, COMMISSARIAT ROAD, GROUND FLOOR'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000047',
+      //         branch: 'NO:117, KORAMANGALA INDUSTRIAL LAYOUT, VII BLOCK'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000053',
+      //         branch: '80 - 7, ELEPHANT ROCK ROAD, 3RD BLOCK, JAYANAGAR'
+      //       }
+      //     ]
+      //   },{
+      //     region:'Mysore',
+      //     branch:[
+      //       {
+      //         ifsc:'ICIC0000152',
+      //         branch: '2950, AISHWARYA ARCADE, 9TH CROSS, KALIDASA ROAD, V.V. MOHALLA'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000558',
+      //         branch: 'INFOSYS TECHNOLOGIES LTD., PLOT NO 350, HEBBAL INDUSTRIAL AREA, HOOTAGALI'
+      //       }
+      //       ,{
+      //         ifsc:'ICIC0000560',
+      //         branch: 'ICICI BANK LTD, BASUDEV SOMANI COLLEGE, CHITRA BHANU ROAD, KUVEMPUNAGAR'
+      //       }
+      //     ]
+      //   }
+      // ]
+      //
+      //
+      // let dateOfInspection = document.getElementById('dateOfInspection')
+      // let dateOfInspectionDisplay = document.getElementById('dateOfInspectionDisplay')
+      // let region = document.getElementById('region');
+      // let branch = document.getElementById('branch')
+      //
+      // let today = new Date();
+      // dateOfInspection.value = today
+      // dateOfInspectionDisplay.innerHTML = today.getDate() + ' / ' + (parseInt(today.getMonth()) + 1) + ' / ' + today.getFullYear()
+      //
+      // region.innerHTML = '<option value=""></option>' //opening field will be empty
+      // allRegionBranchDetails.forEach((eachRegionDetails) => {
+      //   region.innerHTML += '<option value="' + eachRegionDetails['region'] + '">' + eachRegionDetails['region'] + '</option>'
+      // })
+      //
+      // region.onchange = (event) => {
+      //   let selectedRegionDetails
+      //   allRegionBranchDetails.forEach((eachRegionDetails) => {
+      //     if(eachRegionDetails['region'] == region.value){
+      //       selectedRegionDetails = eachRegionDetails
+      //     }
+      //   })
+      //   let innerHTML = '<option value=""></option>'
+      //   selectedRegionDetails['branch'].forEach((eachBranchDetails, index) => {
+      //     innerHTML += '<option value="' + eachBranchDetails['ifsc'] + '">' + eachBranchDetails['branch'] + '</option>'
+      //   })
+      //   branch.innerHTML = innerHTML
+      // }
+      //
+      // branch.onchange = (event) => {
+      //   console.log(branch.value)
+      // }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>

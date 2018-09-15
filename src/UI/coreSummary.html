@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      .container{
+        margin-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+    <title>Audit App</title>
+  </head>
+  <body>
+
+    <div class="content-fetch container">
+      <form class="" action="coreSummary.html" method="post">
+
+        <div class="meta-details form-group">
+
+          <h3>Core Summary</h3>
+          <hr>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Core Parameter</th>
+                <th scope="col">Maxium Score</th>
+                <th scope="col">Score Awarded</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Set 1 -->
+              <tr>
+                <th scope="row" colspan="2">Set I</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- 3rd row -->
+              <tr id="row1">
+                <th scope="row">1</th>
+                <td><a href="#" class="btn-link">Credit Risk Management</a> </td>
+                <td>450</td>
+                <td><span id="S1I1"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><a href="#" class="btn-link" onclick="fillValue(1, 2, 290, event)">Operational Risk Management</a></td>
+                <td>290</td>
+                <td><span id="S1I2"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><a href="#" class="btn-link" onclick="fillValue(1, 3, 40, event)">External Compliance (GOI/RBI)</a></td>
+                <td>40</td>
+                <td><span id="S1I3"></span></td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">Sub Total</th>
+                <td>780</td>
+                <td><span id="S1T"></span></td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+              </tr>
+
+
+              <!-- Set 2 -->
+              <tr>
+                <th scope="row" colspan="2">Set II</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td><a href="#" class="btn-link" onclick="fillValue(2, 1, 150, event)">Business Strategy and Customer Service</a></td>
+                <td>150</td>
+                <td><span id="S2I1"></span> </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><a href="#" class="btn-link" onclick="fillValue(2, 2, 70, event)">Operational Risk Management</a></td>
+                <td>70</td>
+                <td><span id="S2I2"></span> </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">Sub Total</th>
+                <td>220</td>
+                <td><span id="S2T"></span> </td>
+              </tr>
+
+
+              <!-- total -->
+
+              <tr>
+                <td colspan="4"></td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="2">Aggregate</th>
+                <td>1000</td>
+                <td><span id="T"></span> </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+          <button type="submit" class="btn btn-primary" hidden>Start Audit</button>
+          <hr>
+
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+
+      let row1 = document.getElementById('row1');
+      let creditRiskManagementScore = document.getElementById('creditRiskManagementScore');
+
+      let url = window.location.href
+      let parameters = url.split('?')[1]
+
+      let ST = [[-1, -1, -1], [-1, -1]]
+
+      let fillValue = (set, index, max, event) => {
+        event.preventDefault()
+        let val = parseInt(Math.random() * max)
+        while(val < 0.7 * max){
+          val = parseInt(Math.random() * max)
+        }
+        let id = 'S' + set + 'I' + index
+        ST[set - 1][index - 1] = val;
+        console.log(ST);
+        document.getElementById(id).innerHTML = val
+      }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
