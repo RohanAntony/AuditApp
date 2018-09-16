@@ -32,7 +32,7 @@
                 <th scope="col" colspan="2">Quality of Appraisal</th>
                 <th scope="col">Breaches Observed</th>
                 <th scope="col">Risk Matrix</th>
-                <th scope="col">Maxium Score</th>
+                <th scope="col">Maximum Score</th>
                 <th scope="col">Score Awarded</th>
               </tr>
             </thead>
@@ -44,32 +44,32 @@
                 <td>
                   <div class="">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="BOI1" id="BOIV1" value="option1">
-                      <label class="form-check-label" for="BOIV1">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V1" value="10" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V1">
                         None
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="BOI1" id="BOIV2" value="option2">
-                      <label class="form-check-label" for="BOIV2">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V2" value="8" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V2">
                         Very Few
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="BOI1" id="BOIV3" value="option3">
-                      <label class="form-check-label" for="BOIV3">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V3" value="6" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V3">
                         Few
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="BOI1" id="BOIV3" value="option3">
-                      <label class="form-check-label" for="BOIV3">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V4" value="4" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V4">
                         Some
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="BOI1" id="BOIV3" value="option3">
-                      <label class="form-check-label" for="BOIV3">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V5" value="2" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V5">
                         Many
                       </label>
                     </div>
@@ -78,25 +78,25 @@
                 <td>
                   <div class="">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V1" value="option1">
+                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V1" value="4" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
                       <label class="form-check-label" for="RMI1V1">
                         Very Low
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V2" value="option2">
+                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V2" value="3" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
                       <label class="form-check-label" for="RMI1V2">
                         Low
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V3" value="option3">
+                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V3" value="2" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
                       <label class="form-check-label" for="RMI1V3">
                         Medium
                       </label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V3" value="option3">
+                      <input class="form-check-input" type="radio" name="RMI1" id="RMI1V4" value="1" onclick="fillValue('BOI1', 'RMI1', 'S1I1', 0, event)">
                       <label class="form-check-label" for="RMI1V3">
                         High
                       </label>
@@ -107,8 +107,296 @@
                 <td>15</td>
               </tr>
 
+
+              <tr>
+                <th scope="row">b)</th>
+                <td>Income documents</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V1" value="2" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V1">
+                        None
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V2" value="1" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V2">
+                        Very Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V3" value="1" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V3">
+                        Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V4" value="0" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V4">
+                        Some
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V5" value="0" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V5">
+                        Many
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI2" id="RMI2V1" value="2" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="RMI2V1">
+                        Very Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI2" id="RMI2V2" value="1" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="RMI2V2">
+                        Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI2" id="RMI2V3" value="1" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="RMI2V3">
+                        Medium
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI2" id="RMI2V4" value="0" onclick="fillValue('BOI2', 'RMI2', 'S1I2', 1, event)">
+                      <label class="form-check-label" for="RMI2V3">
+                        High
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I2"></span></td>
+                <td>5</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">c)</th>
+                <td>Bank statements</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V1" value="2" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V1">
+                        None
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V2" value="1" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V2">
+                        Very Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V3" value="1" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V3">
+                        Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V4" value="0" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V4">
+                        Some
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V5" value="0" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V5">
+                        Many
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI3" id="RMI3V1" value="2" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="RMI3V1">
+                        Very Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI3" id="RMI3V2" value="1" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="RMI3V2">
+                        Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI3" id="RMI3V3" value="1" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="RMI3V3">
+                        Medium
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI3" id="RMI3V4" value="0" onclick="fillValue('BOI3', 'RMI3', 'S1I3', 2, event)">
+                      <label class="form-check-label" for="RMI3V3">
+                        High
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I3"></span></td>
+                <td>5</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">d)</th>
+                <td>Onsite verification by salesperson</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V1" value="5" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V1">
+                        None
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V2" value="4" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V2">
+                        Very Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V3" value="3" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V3">
+                        Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V4" value="2" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V4">
+                        Some
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V5" value="1" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V5">
+                        Many
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI4" id="RMI4V1" value="4" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="RMI4V1">
+                        Very Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI4" id="RMI4V2" value="3" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="RMI4V2">
+                        Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI4" id="RMI4V3" value="2" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="RMI4V3">
+                        Medium
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI4" id="RMI4V4" value="1" onclick="fillValue('BOI4', 'RMI4', 'S1I4', 3, event)">
+                      <label class="form-check-label" for="RMI4V3">
+                        High
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I4"></span></td>
+                <td>10</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">e)</th>
+                <td>Processing fees cheque</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V1" value="3" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V1">
+                        None
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V2" value="2" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V2">
+                        Very Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V3" value="1" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V3">
+                        Few
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V4" value="1" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V4">
+                        Some
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V5" value="0" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V5">
+                        Many
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI5" id="RMI5V1" value="2" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="RMI5V1">
+                        Very Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI5" id="RMI5V2" value="1" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="RMI5V2">
+                        Low
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI5" id="RMI5V3" value="1" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="RMI5V3">
+                        Medium
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="RMI5" id="RMI5V4" value="0" onclick="fillValue('BOI5', 'RMI5', 'S1I5', 4, event)">
+                      <label class="form-check-label" for="RMI5V3">
+                        High
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I5"></span></td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="4">Sub Total</th>
+                <td><span id="T"></span></td>
+                <td>40</td>
+              </tr>
+
             </tbody>
           </table>
+
+          <a href="qualityOfAppraisal" id="Rollup" class="btn btn-primary" hidden>Roll up</a>
 
           <hr>
         </div>
@@ -118,7 +406,45 @@
 
     <script type="text/javascript">
 
+      let values = ['', '', '', '', '']
 
+      let getCheckedItemValue = (name) => {
+        var items = document.getElementsByName(name);
+        let val = 0;
+        items.forEach((item) => {
+          if(item.checked)
+            val = item.value
+        })
+        return val;
+      }
+
+      let calculateSumAndDisplayRollUp = () => {
+        let sum = 0;
+        let sumDisplay = document.getElementById('T');
+        let rollupDisplay = document.getElementById('Rollup');
+        values.forEach((val) => {
+          if(val != '')
+            sum += parseInt(val)
+          else{
+            sumDisplay.innerHTML = '';
+            rollupDisplay.setAttribute("hidden");
+            return;
+          }
+        })
+        sumDisplay.innerHTML = sum;
+        rollupDisplay.setAttribute("href","creditRisk.html?qoa=" + sum)
+        rollupDisplay.removeAttribute("hidden");
+      }
+
+      let fillValue = (breachesObseverd, riskMatrix, id, index, event) => {
+        let breachesObseverdValue = getCheckedItemValue(breachesObseverd);
+        let riskMatrixValue = getCheckedItemValue(riskMatrix);
+        breachesObseverdValue = parseInt(breachesObseverdValue) ? parseInt(breachesObseverdValue) : 0
+        riskMatrixValue = parseInt(riskMatrixValue) ? parseInt(riskMatrixValue) : 0
+        document.getElementById(id).innerHTML = breachesObseverdValue + riskMatrixValue;
+        values[index] = breachesObseverdValue + riskMatrixValue;
+        calculateSumAndDisplayRollUp();
+      }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
