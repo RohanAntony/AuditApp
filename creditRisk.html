@@ -45,14 +45,14 @@
 
               <tr>
                 <th scope="row">b)</th>
-                <td><a href="#" class="btn-link">Quality of Assessment</a> </td>
+                <td><a href="#" class="btn-link" onclick="fillValue('S1I2', 50, 1, event)">Quality of Assessment</a> </td>
                 <td>50</td>
                 <td><span id="S1I2"></span></td>
               </tr>
 
               <tr>
                 <th scope="row">c)</th>
-                <td><a href="#" class="btn-link">Sanction</a> </td>
+                <td><a href="#" class="btn-link" onclick="fillValue('S1I3', 10, 2, event)">Sanction</a> </td>
                 <td>10</td>
                 <td><span id="S1I3"></span></td>
               </tr>
@@ -64,18 +64,13 @@
               </tr>
 
               <tr>
-                <th scope="row" colspan="2">Normalised Score</th>
-                <td>150</td>
-                <td><span id="ST"></span></td>
-              </tr>
-
-              <tr>
                 <td colspan="4"></td>
               </tr>
 
-
             </tbody>
           </table>
+
+          <a href="#" id="Rollup" class="btn btn-primary" hidden>Roll up</a>
 
           <hr>
         </div>
@@ -84,8 +79,51 @@
     </div>
 
     <script type="text/javascript">
+      let url = window.location.href
+      let values = ['', '', '']
+      let qoa;
+      try{
+        qoa = url.split('?')[1].split('=')[1]
+        values[0] = qoa = parseInt(qoa);
+      }catch(error){
+        qoa = '';
+        values[0] = ''
+      }
+      document.getElementById('S1I1').innerHTML = qoa;
 
+      let calculateSumAndRollup = () => {
+        let sum = 0;
+        let sumDisplay = document.getElementById('ST');
+        let rollupDisplay = document.getElementById('Rollup');
+        values.forEach((val) => {
+          console.log(isNaN(parseInt(val)))
+          if(!isNaN(parseInt(val)) && sum != -1){
+            sum += parseInt(val)
+          }
+          else{
+            sum = -1;
+            sumDisplay.innerHTML = '';
+            rollupDisplay.setAttribute("hidden", "");
+          }
+        })
+        console.log(values)
+        if(sum == -1)
+          return;
+        sumDisplay.innerHTML = sum;
+        rollupDisplay.setAttribute("href","coreSummary.html?cr=" + (sum + 300))
+        rollupDisplay.removeAttribute("hidden");
+      }
 
+      let fillValue = (id, max, index, event) => {
+        event.preventDefault();
+        let val = parseInt(Math.random() * max)
+        while(val < 0.7 * max){
+          val = parseInt(Math.random() * max)
+        }
+        values[index] = val;
+        document.getElementById(id).innerHTML = val
+        calculateSumAndRollup();
+      }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

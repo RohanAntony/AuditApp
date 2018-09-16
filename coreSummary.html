@@ -124,10 +124,51 @@
       let row1 = document.getElementById('row1');
       let creditRiskManagementScore = document.getElementById('creditRiskManagementScore');
 
-      let url = window.location.href
-      let parameters = url.split('?')[1]
+      let ST1values = ['', '', '']
+      let ST2values = ['', '']
 
-      let ST = [[-1, -1, -1], [-1, -1]]
+      let url = window.location.href
+      let cr;
+      try{
+        cr = url.split('?')[1].split('=')[1]
+        ST1values[0] = cr = parseInt(cr);
+      }catch(error){
+        cr = '';
+        ST1values[0] = ''
+      }
+      document.getElementById('S1I1').innerHTML = cr;
+
+      let calculateSum = () => {
+        let ST1sum = 0, ST2sum = 0;
+        ST1values.forEach((val)=> {
+          if(!isNaN(parseInt(val)) && ST1sum != -1){
+            ST1sum += parseInt(val)
+          }else{
+            ST1sum = -1;
+          }
+        })
+        if(ST1sum != -1)
+          document.getElementById('S1T').innerHTML = ST1sum
+        else {
+          document.getElementById('S1T').innerHTML = ''
+        }
+        ST2values.forEach((val)=> {
+          if(!isNaN(parseInt(val)) && ST2sum != -1){
+            ST2sum += parseInt(val)
+          }else{
+            ST2sum = -1;
+          }
+        })
+        if(ST2sum != -1)
+          document.getElementById('S2T').innerHTML = ST2sum
+        else {
+          document.getElementById('S2T').innerHTML = ''
+        }
+
+        if(ST1sum != -1 && ST2sum != -1){
+          document.getElementById("T").innerHTML = ST1sum + ST2sum;
+        }
+      }
 
       let fillValue = (set, index, max, event) => {
         event.preventDefault()
@@ -135,10 +176,14 @@
         while(val < 0.7 * max){
           val = parseInt(Math.random() * max)
         }
+        if(set == 1)
+          ST1values[index - 1] = val;
+        else {
+          ST2values[index - 1] = val;
+        }
         let id = 'S' + set + 'I' + index
-        ST[set - 1][index - 1] = val;
-        console.log(ST);
         document.getElementById(id).innerHTML = val
+        calculateSum();
       }
 
     </script>
